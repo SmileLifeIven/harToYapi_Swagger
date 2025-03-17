@@ -1,0 +1,445 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "合并API文档",
+    "version": "1.0.0",
+    "description": "合并后的Swagger API文档"
+  },
+  "host": "10.4.51.221:9600",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/proxymgr/v1/planarnet/4": {
+      "delete": {
+        "summary": "DELETE /proxymgr/v1/planarnet/4",
+        "tags": [
+          "planarnet"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "成功返回数据",
+            "schema": {
+              "type": "object",
+              "required": [
+                "error",
+                "status",
+                "responseData"
+              ],
+              "properties": {
+                "error": {
+                  "type": "null"
+                },
+                "status": {
+                  "type": "string",
+                  "mock": {
+                    "mock": "success"
+                  }
+                },
+                "responseData": {
+                  "type": "object",
+                  "required": [
+                    "data"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "boolean",
+                      "mock": {
+                        "mock": true
+                      },
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job_center/v1/business_types": {
+      "get": {
+        "summary": "GET /job_center/v1/business_types",
+        "tags": [
+          "business_types"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "成功返回数据",
+            "schema": {
+              "type": "object",
+              "required": [
+                "status",
+                "error",
+                "responseData"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "mock": {
+                    "mock": "success"
+                  }
+                },
+                "error": {
+                  "type": "null"
+                },
+                "responseData": {
+                  "type": "object",
+                  "required": [
+                    "data"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "minItems": 5,
+                      "maxItems": 20,
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "operationType",
+                          "name",
+                          "businessTypes"
+                        ],
+                        "properties": {
+                          "operationType": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": 1
+                            }
+                          },
+                          "name": {
+                            "type": "string",
+                            "mock": {
+                              "mock": "@name"
+                            },
+                            "enum": [
+                              "备份与恢复",
+                              "完全备份",
+                              "增量备份",
+                              "差异备份",
+                              "日志备份",
+                              "快照",
+                              "恢复",
+                              "挂载恢复",
+                              "数据同步",
+                              "反向复制",
+                              "复制到磁带"
+                            ]
+                          },
+                          "businessTypes": {
+                            "type": "array",
+                            "minItems": 5,
+                            "maxItems": 20,
+                            "items": {
+                              "type": "object",
+                              "required": [
+                                "businessType",
+                                "name"
+                              ],
+                              "properties": {
+                                "businessType": {
+                                  "type": "integer",
+                                  "mock": {
+                                    "mock": 1
+                                  },
+                                  "enum": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    10,
+                                    11,
+                                    20,
+                                    21,
+                                    22
+                                  ]
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "mock": {
+                                    "mock": "@name"
+                                  },
+                                  "enum": [
+                                    "备份与恢复",
+                                    "完全备份",
+                                    "增量备份",
+                                    "差异备份",
+                                    "日志备份",
+                                    "快照",
+                                    "恢复",
+                                    "挂载恢复",
+                                    "数据同步",
+                                    "反向复制",
+                                    "复制到磁带"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/proxymgr/v1/planarnet": {
+      "post": {
+        "summary": "POST /proxymgr/v1/planarnet",
+        "tags": [
+          "planarnet"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "default": {
+            "description": "成功返回数据",
+            "schema": {
+              "type": "object",
+              "required": [
+                "status",
+                "error",
+                "responseData"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "mock": {
+                    "mock": "success"
+                  }
+                },
+                "error": {
+                  "type": "null"
+                },
+                "responseData": {
+                  "type": "object",
+                  "required": [
+                    "data"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "boolean",
+                      "mock": {
+                        "mock": true
+                      },
+                      "enum": [
+                        true,
+                        false
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/proxymgr/v1/planarnet/list": {
+      "get": {
+        "summary": "GET /proxymgr/v1/planarnet/list",
+        "tags": [
+          "planarnet"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "index",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "index参数",
+            "mock": {
+              "mock": "0"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "count参数",
+            "mock": {
+              "mock": "30"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "成功返回数据",
+            "schema": {
+              "type": "object",
+              "required": [
+                "status",
+                "responseData",
+                "error",
+                "message"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "mock": {
+                    "mock": "success"
+                  }
+                },
+                "responseData": {
+                  "type": "object",
+                  "required": [
+                    "data"
+                  ],
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "minItems": 5,
+                      "maxItems": 20,
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "planarnetId",
+                          "desc",
+                          "planarNetName",
+                          "createTime",
+                          "updateTime",
+                          "deleteTime",
+                          "disabled"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": "@id"
+                            },
+                            "enum": [
+                              3,
+                              2,
+                              1
+                            ]
+                          },
+                          "planarnetId": {
+                            "type": "string",
+                            "mock": {
+                              "mock": "@id"
+                            },
+                            "enum": [
+                              "520000200009088837",
+                              "210000201306079242",
+                              "13000019850224516X"
+                            ]
+                          },
+                          "desc": {
+                            "type": "string",
+                            "mock": {
+                              "mock": "资把度拉第商需达温根业极验先合用产电很感加改自好界都总般状越石保万养龙些行青公验半指条北题除求况条地。"
+                            },
+                            "enum": [
+                              "资把度拉第商需达温根业极验先合用产电很感加改自好界都总般状越石保万养龙些行青公验半指条北题除求况条地。",
+                              "定等定更更工计或金物对你般被第们量没带感山共飞反五例严。",
+                              "后龙都去员为办王车数界加就并感目价劳线象见。"
+                            ]
+                          },
+                          "planarNetName": {
+                            "type": "string",
+                            "mock": {
+                              "mock": "dljgpdylqnjs"
+                            },
+                            "enum": [
+                              "dljgpdylqnjs",
+                              "oyyetswlwf",
+                              "tdimoxlvnlhadzd"
+                            ]
+                          },
+                          "createTime": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": 1740731505
+                            },
+                            "enum": [
+                              1740731505,
+                              1740819764,
+                              1740242472
+                            ]
+                          },
+                          "updateTime": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": 1740325659
+                            },
+                            "enum": [
+                              1740325659,
+                              1741042407,
+                              1740221939
+                            ]
+                          },
+                          "deleteTime": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": 1740437885
+                            },
+                            "enum": [
+                              1740437885,
+                              1740456243,
+                              1740999515
+                            ]
+                          },
+                          "disabled": {
+                            "type": "integer",
+                            "mock": {
+                              "mock": 0
+                            },
+                            "enum": [
+                              0,
+                              1
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "error": {
+                  "type": "null"
+                },
+                "message": {
+                  "type": "string",
+                  "mock": {
+                    "mock": ""
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "planarnet"
+    },
+    {
+      "name": "business_types"
+    }
+  ]
+}
